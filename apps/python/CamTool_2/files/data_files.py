@@ -21,8 +21,8 @@ class DataFiles:
                 index2 = track_name.rfind("-")
                 track_name = track_name[0:index2]
 
-                expected_track_name = ac.getTrackName(0) + "_" + ac.getTrackConfiguration(0)
-                if expected_track_name == track_name:
+                expected_track_name = ac.getTrackName(0)
+                if expected_track_name in track_name:
                     dataname = file[index2+1:len(file) - 5]
                     config_files.append(dataname)
 
